@@ -1,0 +1,142 @@
+@import "./variables.scss";
+
+.homepage-header {
+    background-size: cover;
+    height: 800px;
+    background-color: $blue;
+    position: relative;
+    overflow: hidden;
+
+    .navbar-section {
+        display: flex;
+        align-items: center;
+        height: 90px;
+
+        .left {
+            display: flex;
+            justify-content: flex-start;
+
+            img {
+                margin-left: 32px;
+            }
+
+            @media (min-width: $md) {
+                margin-left: 0;
+            }
+        }
+
+        .right {
+            display: none;
+
+            @media (min-width: $md) {
+                display: flex;
+                justify-content: flex-end;
+            } 
+
+            nav {
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 0;
+
+                    li {
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        margin: 0 32px;
+                        list-style: none;
+
+                        a {
+                            text-decoration: none;
+                            color: $dark;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .homepage-header-main-section {
+        margin-top: 100px;
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            font-weight: 700;
+
+            @media (min-width: $lg) {
+                font-size: 90px;
+                text-align: left;
+                line-height: 108px;
+            }
+        }
+
+        h2 {
+            margin-top: 18px;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+
+            @media (min-width: $lg) {
+                text-align: left;
+            }
+        }
+
+        .btn-holder {
+            display: flex;
+            flex-direction: row;
+            margin-top: 32px;
+            justify-content: center;
+
+            @media (min-width: $lg) {
+                justify-content: flex-start;
+            }
+
+            a {
+                border: 1px solid $dark;
+                padding: 18px 24px;
+                text-decoration: none;
+                color: $dark;
+
+                &.our-projects-btn {
+                    background-color: $dark;
+                    color: $white;
+                }
+
+                &.contact-us-btn {
+                    margin-left: 30px;
+                }
+            }
+        }
+
+    }
+
+    .header-house-img {
+        height: 400px;
+        width: 480px;
+        padding: 0 64px;
+        position: absolute;
+        right: 0;
+        bottom: 0; 
+
+        @media (min-width: $md) {
+            padding: 0 224px;
+        }
+
+        @media (min-width: $lg) {
+            height: 620px;
+            width: 532px;
+            padding: 0;
+        }
+
+        @media (min-width: $xl) {
+            height: 800px;
+            width: 700px;
+        }
+
+        
+    }
+
+
+}
